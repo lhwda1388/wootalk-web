@@ -1,5 +1,6 @@
 import React, { ComponentType, ReactNode } from 'react'
 import { Route, RouteComponentProps, RouteChildrenProps } from 'react-router-dom'
+import DefaultLayout from '../layout/index'
 
 type AppRouteProps = {
   component?: ComponentType<RouteComponentProps<any>> | ComponentType<any> | any
@@ -9,7 +10,7 @@ type AppRouteProps = {
   exact?: boolean
   sensitive?: boolean
   strict?: boolean
-  layout: ComponentType<any>
+  layout?: ComponentType<any>
   private?: boolean
 }
 function AppRoute(props: AppRouteProps) {
@@ -17,11 +18,21 @@ function AppRoute(props: AppRouteProps) {
   return (
     <Route
       {...rest}
-      render={(props) => (
-        <Layout>
-          <RouteComponent {...props}></RouteComponent>
-        </Layout>
-      )}
+      render={(props) => {
+        if (Layout === null || Layout === undefined) {
+          return (
+            <DefaultLayout>
+              <RouteComponent {...props} />
+            </DefaultLayout>
+          )
+        } else {
+          return (
+            <Layout>
+              <RouteComponent {...props} />
+            </Layout>
+          )
+        }
+      }}
     />
   )
 }

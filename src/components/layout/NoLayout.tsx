@@ -1,18 +1,16 @@
 import React, { ReactNode } from 'react'
-import Header from './Header'
 
-type LayoutProps = {
+type NoLayoutProps = {
   children: ReactNode
 }
 
-function Layout2(props: LayoutProps) {
+function NoLayout(props: NoLayoutProps) {
   const { children } = props
   return (
     <>
-      <Header />
       <div className="container">{children}</div>
     </>
   )
 }
 
-export default Layout2
+export default NoLayout
