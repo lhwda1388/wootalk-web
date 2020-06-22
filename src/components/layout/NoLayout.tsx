@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import Container from './Container'
 
 type NoLayoutProps = {
   children: ReactNode
@@ -8,7 +9,7 @@ function NoLayout(props: NoLayoutProps) {
   const { children } = props
   return (
     <>
-      <div className="container">{children}</div>
+      <Container>{children}</Container>
     </>
   )
 }

@@ -1,7 +1,10 @@
 import React from 'react'
+import SignIn from '../../components/signin/index'
 
-function SignInPage() {
-  return <div>SignInPage</div>
+type SignInPageProps = {}
+
+function SignInPage(props: SignInPageProps) {
+  return <SignIn {...props} />
 }
 
 export default SignInPage
