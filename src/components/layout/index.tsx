@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import Header from './Header'
+import Container from './Container'
 import Footer from './Footer'
 
 type LayoutProps = {
@@ -11,7 +12,7 @@ function Layout(props: LayoutProps) {
   return (
     <>
       <Header />
-      <div className="container">{children}</div>
+      <Container>{children}</Container>
       <Footer />
     </>
   )
