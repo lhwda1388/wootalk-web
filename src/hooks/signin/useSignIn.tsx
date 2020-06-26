@@ -1,11 +1,13 @@
-import React, { useCallback } from 'react'
-import { AxiosResponse } from 'axios'
+import { useCallback } from 'react'
 import { signin } from '../../api/signin'
+import { useHistory } from 'react-router-dom'
 
-function useSiginin() {
-  const signInSubmit = useCallback((data) => {
+function useSiginin(): Array<any> {
+  const history = useHistory()
+  const signInSubmit = useCallback(async (data) => {
     const { email, pwd } = data
-    signin(email, pwd).then((res: AxiosResponse) => {})
+    const result = await signin(email, pwd)
+    if (result.data.code === 200) history.push('/')
   }, [])
 
   return [signInSubmit]

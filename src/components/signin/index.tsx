@@ -1,8 +1,8 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useForm, ErrorMessage } from 'react-hook-form'
-import { AxiosResponse } from 'axios'
 import useSiginin from '../../hooks/signin/useSignIn'
+import { RouteComponentProps } from 'react-router-dom'
 
 const Wrap = styled.div`
   margin: 20px auto;
@@ -73,6 +73,7 @@ function SignIn(props: SignInProps) {
             type="text"
             name="email"
             id="email"
+            placeholder="이메일 입력"
             ref={register({
               required: 'This is required',
               pattern: {
@@ -89,6 +90,7 @@ function SignIn(props: SignInProps) {
             type="password"
             name="pwd"
             id="pwd"
+            placeholder="패스워드 입력"
             ref={register({ required: true })}
           ></input>
           <ErrorMessage errors={errors} name="pwd" message="This is required">
