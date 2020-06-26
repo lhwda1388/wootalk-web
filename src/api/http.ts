@@ -43,6 +43,7 @@ const errorFunc = (error: any) => {
       break
     case 500:
       alert(msg)
+      break
     default:
       break
   }
