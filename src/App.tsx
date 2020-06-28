@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Switch } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
-import SignInPage from './pages/signin'
-import SignUpPage from './pages/signup'
-import HomePage from './pages/home'
-import AppRoute from './components/common/AppRoute'
+import SignInPage from '@/pages/signin'
+import SignUpPage from '@/pages/signup'
+import HomePage from '@/pages/home'
+import AppRoute from '@/components/common/AppRoute'
 
 const GlobalStyle = createGlobalStyle`
   * {

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useForm, ErrorMessage } from 'react-hook-form'
-import useSiginin from '../../hooks/signin/useSignIn'
+import useSiginin from '@/hooks/signin/useSignIn'
 
 const Wrap = styled.div`
   margin: 20px auto;
