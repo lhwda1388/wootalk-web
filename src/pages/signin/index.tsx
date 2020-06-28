@@ -1,5 +1,5 @@
 import React from 'react'
-import SignIn from '../../components/signin/index'
+import SignIn from '@/components/signin/index'
 
 type SignInPageProps = {}
 

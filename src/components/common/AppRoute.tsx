@@ -1,6 +1,10 @@
 import React, { ComponentType, ReactNode } from 'react'
-import { Route, RouteComponentProps, RouteChildrenProps } from 'react-router-dom'
-import DefaultLayout from '../layout/index'
+import {
+  Route,
+  RouteComponentProps,
+  RouteChildrenProps,
+} from 'react-router-dom'
+import DefaultLayout from '@/components/layout'
 
 type AppRouteProps = {
   component?: ComponentType<RouteComponentProps<any>> | ComponentType<any> | any

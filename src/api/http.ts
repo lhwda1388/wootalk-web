@@ -41,7 +41,9 @@ const errorFunc = (error: any) => {
     case 403:
       alert(msg)
       break
-
+    case 500:
+      alert(msg)
+      break
     default:
       break
   }
