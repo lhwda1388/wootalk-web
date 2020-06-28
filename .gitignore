@@ -10,6 +10,7 @@
 
 # production
 /build
+/infra/nginx/build
 
 # misc
 .DS_Store
